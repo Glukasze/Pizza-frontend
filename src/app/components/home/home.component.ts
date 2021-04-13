@@ -12,4 +12,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll(targetId: string): void {
+    const target = document.getElementById(targetId);
+    target.scrollIntoView();
+  }
+
 }

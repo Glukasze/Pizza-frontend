@@ -7,4 +7,5 @@ export interface Pizza {
   cheese: boolean;
   sauce: Ingredient;
   toppings: Ingredient[];
+  toppingsString: string;
 }
