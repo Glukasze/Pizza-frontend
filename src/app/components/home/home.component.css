@@ -1,0 +1,29 @@
+.background-image {
+  background-image: url("https://images.pexels.com/photos/4553111/pexels-photo-4553111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.headers-homepage {
+  margin: 0;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.header-homepage {
+  padding-bottom: 50px;
+  font-family: Papyrus, fantasy;
+  font-weight: bold;
+  font-size: 55px;
+  color: #514141;
+}
+
+.header-homepage:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 6%;
+}
