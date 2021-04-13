@@ -1,5 +1,5 @@
 .background-image {
-  background-image: url("https://images.pexels.com/photos/4553111/pexels-photo-4553111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("src/assets/pictures/home.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,6 +16,8 @@
 }
 
 .header-homepage {
+  border: none;
+  background-color: transparent;
   padding-bottom: 50px;
   font-family: Papyrus, fantasy;
   font-weight: bold;
