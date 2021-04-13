@@ -1,0 +1,45 @@
+.background-image {
+  background-image: url("https://images.pexels.com/photos/3847486/pexels-photo-3847486.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.menu-picture {
+  height: 65vh;
+  position: absolute;
+  left: 60%;
+}
+
+.header-menu {
+  border: none;
+  background-color: transparent;
+  padding-bottom: 50px;
+  font-family: Papyrus, fantasy;
+  font-weight: bold;
+  font-size: 55px;
+  color: #a24848;
+  position: relative;
+  left: 39%;
+  top: 5%;
+}
+
+.pizza-header {
+  font-family: Papyrus, fantasy;
+  font-weight: bold;
+  /*font-size: 55px;*/
+  color: #514141;
+}
+.pizza-ingredients {
+  font-family: Papyrus, fantasy;
+  font-weight: bold;
+  /*font-size: 55px;*/
+  color: #514141;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding-bottom: 5px;
+  padding-left: 40px;
+}

@@ -1,5 +1,6 @@
 .background-image {
-  background-image: url("src/assets/pictures/home.jpeg");
+  background-attachment: fixed;
+  background-image: url("https://images.pexels.com/photos/4553111/pexels-photo-4553111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,4 +29,9 @@
 .header-homepage:hover {
   text-decoration: underline;
   text-decoration-thickness: 6%;
+}
+
+.background-separator {
+  background-color: whitesmoke;
+  height: 20vh;
 }
