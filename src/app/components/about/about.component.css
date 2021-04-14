@@ -1,0 +1,37 @@
+.background-image {
+  background-image: url("https://images.pexels.com/photos/3847486/pexels-photo-3847486.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.header-about {
+  border: none;
+  background-color: transparent;
+  padding-bottom: 50px;
+  font-family: Papyrus, fantasy;
+  font-weight: bold;
+  font-size: 55px;
+  color: #a24848;
+  position: relative;
+  left: 39%;
+  top: 7%;
+  width: 100vh;
+}
+
+.about-picture {
+  height: 50vh;
+  position: relative;
+  padding-top: 60px;
+  margin-top: 50px;
+  left: 5%;
+}
+
+.about-paragraph {
+  position: relative;
+  left: 50%;
+  top: -300px;
+  width: 600px;
+}

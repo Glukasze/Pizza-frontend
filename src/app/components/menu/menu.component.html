@@ -2,11 +2,13 @@
   <h1 class="header-menu">PIZZA</h1>
   <div>
     <img class="menu-picture" src="https://images.pexels.com/photos/5792328/pexels-photo-5792328.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="image of pizza">
-    <ul class="menu-list" *ngFor="let pizza of pizzas">
-      <li>
-        <h3 class="pizza-header">{{ pizza.name }}</h3>
-        <p class="pizza-ingredients">{{ pizza.toppingsString}}</p>
-      </li>
-    </ul>
+    <div class="menu-list-div">
+      <ul class="menu-list" *ngFor="let pizza of pizzas">
+        <li>
+          <h3 class="pizza-header">{{ pizza.name }}</h3>
+          <p class="pizza-ingredients">{{ pizza.toppingsString}}</p>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
