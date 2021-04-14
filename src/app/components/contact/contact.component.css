@@ -7,13 +7,7 @@
   background-attachment: fixed;
 }
 
-.menu-picture {
-  height: 65vh;
-  position: absolute;
-  left: 60%;
-}
-
-.header-menu {
+.header-contact {
   border: none;
   background-color: transparent;
   padding-bottom: 50px;
@@ -22,24 +16,7 @@
   font-size: 55px;
   color: #a24848;
   position: relative;
-  left: 41%;
-  top: 5%;
+  left: 37%;
+  top: 7%;
   width: 100vh;
-}
-
-.pizza-ingredients {
-  font-family: Papyrus, fantasy;
-  font-weight: bold;
-  /*font-size: 55px;*/
-  color: #514141;
-}
-
-.menu-list {
-  list-style-type: none;
-  padding-bottom: 5px;
-  padding-left: 40px;
-}
-
-.menu-list-div {
-  margin-top: 50px;
 }
