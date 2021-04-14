@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { } from '@types/googlemaps';
+
 
 @Component({
   selector: 'app-contact',
@@ -8,14 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  lat = 52.244091542333145;
+  lng = 21.0848174024474;
+  zoom = 17;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  // initMap(): void {
-  //   const coordinates = {lat: 52.24437281019297, lng: 21.08537738826455};
-  //   const map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: coordinates});
-  // }
 
 }
