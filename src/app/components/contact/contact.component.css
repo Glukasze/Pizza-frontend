@@ -20,3 +20,22 @@
   top: 7%;
   width: 100vh;
 }
+
+.map {
+  height: 60vh;
+  width: 80vh;
+  position: relative;
+  top: 60px;
+  left: 30px;
+}
+
+.contact-text {
+  position: relative;
+  left: 60%;
+  bottom: 40%;
+  width: 500px;
+}
+
+.map-div {
+  width: 60vh;
+}
