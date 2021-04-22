@@ -27,17 +27,31 @@
   width: 100vh;
 }
 
+.pizza-header {
+  font-family: Papyrus, fantasy;
+  font-weight: bold;
+  color: #514141;
+  padding-top: 20px;
+}
+
 .pizza-ingredients {
   font-family: Papyrus, fantasy;
   font-weight: bold;
-  /*font-size: 55px;*/
   color: #514141;
+  margin-bottom: 2px;
+}
+
+.menu-table, td, ul {
+  padding-bottom: 5px;
+  padding-left: 40px;
+  vertical-align: top;
 }
 
 .menu-list {
   list-style-type: none;
-  padding-bottom: 5px;
-  padding-left: 40px;
+  border-bottom: dashed black;
+  border-width: thin;
+
 }
 
 .menu-list-div {

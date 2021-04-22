@@ -3,12 +3,25 @@
   <div>
     <img class="menu-picture" src="https://images.pexels.com/photos/5792328/pexels-photo-5792328.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="image of pizza">
     <div class="menu-list-div">
-      <ul class="menu-list" *ngFor="let pizza of pizzas">
-        <li>
-          <h3 class="pizza-header">{{ pizza.name }}</h3>
-          <p class="pizza-ingredients">{{ pizza.toppingsString}}</p>
-        </li>
-      </ul>
+      <table class="menu-table">
+        <tr>
+          <td>
+            <ul *ngFor="let pizza of row1">
+              <li class="menu-list">
+                <h3 class="pizza-header">{{ pizza.name }}</h3>
+                <p class="pizza-ingredients">{{ pizza.toppingsString}}</p>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <ul *ngFor="let pizza of row2">
+              <li class="menu-list">
+                <h3 class="pizza-header">{{ pizza.name }}</h3>
+                <p class="pizza-ingredients">{{ pizza.toppingsString}}</p>
+              </li>
+            </ul>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

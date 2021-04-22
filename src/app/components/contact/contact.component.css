@@ -29,13 +29,39 @@
   left: 30px;
 }
 
-.contact-text {
+.contact-table-div {
   position: relative;
-  left: 60%;
-  bottom: 40%;
+  left: 50%;
+  bottom: 53%;
   width: 500px;
+}
+
+.contact-table {
+  width: 100%;
+}
+
+.contact-table-address {
+  height: 40px;
+}
+
+.contact-table-address-street {
+  height: 2px;
 }
 
 .map-div {
   width: 60vh;
+}
+
+.footer {
+  position: absolute;
+  right: 100px;
+  font-weight: lighter;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
