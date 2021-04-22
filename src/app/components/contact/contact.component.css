@@ -29,15 +29,27 @@
   left: 30px;
 }
 
-.contact-table-div {
+.contact-address-table-div {
   position: relative;
-  left: 50%;
+  left: 60%;
   bottom: 53%;
   width: 500px;
 }
 
-.contact-table {
+.contact-hours-table-div {
+  position: relative;
+  left: 60%;
+  bottom: 300px;
+  width: 500px;
+}
+
+.contact-address-table {
   width: 100%;
+}
+
+.contact-hours-table {
+  column-width: 150px;
+  width: 70%;
 }
 
 .contact-table-address {
@@ -48,14 +60,23 @@
   height: 2px;
 }
 
+.hours-table-head {
+  text-align: right;
+  padding-bottom: 20px;
+}
+
 .map-div {
+  position: relative;
+  left: 10%;
   width: 60vh;
 }
 
 .footer {
-  position: absolute;
-  right: 100px;
+  position: relative;
+  left: 85%;
+  bottom: 30%;
   font-weight: lighter;
+  width: 200px;
 }
 
 a {
