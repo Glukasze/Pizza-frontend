@@ -10,6 +10,10 @@ import {MenuService} from '../../services/menu.service';
 export class MenuComponent implements OnInit {
 
   pizzas: Pizza[] = [];
+  row1: Pizza[] = [];
+  row2: Pizza[] = [];
+
+  productsPerColumn = 5;
 
   constructor(private menuService: MenuService) { }
 
@@ -21,8 +25,20 @@ export class MenuComponent implements OnInit {
     this.menuService.getMenu()
       .subscribe(menu => {
         this.pizzas = menu;
-        console.log(menu);
+        if (this.pizzas.length > 0) {
+          this.sortMenu();
+        }
       });
+  }
+
+  sortMenu(): void {
+    for (let i = 0; i < this.pizzas.length; i++) {
+      if (i < this.productsPerColumn) {
+        this.row1.push(this.pizzas[i]);
+      } else {
+        this.row2.push(this.pizzas[i]);
+      }
+    }
   }
 
 }
