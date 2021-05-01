@@ -10,8 +10,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { AboutComponent } from './components/home-page/about/about.component';
 import { ContactComponent } from './components/home-page/contact/contact.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
-import {OrderPageComponent} from './components/order-page/order-menu.component';
+import {OrderPageComponent} from './components/order-page/order-page.component';
 import { NavbarComponent } from './components/order-page/navbar/navbar.component';
+import { OrderPageMenuComponent } from './components/order-page/order-page-menu/order-page-menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavbarComponent } from './components/order-page/navbar/navbar.component
     ContactComponent,
     HomePageComponent,
     OrderPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    OrderPageMenuComponent
   ],
   imports: [
     BrowserModule,
