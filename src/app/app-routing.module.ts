@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MenuComponent} from './components/menu/menu.component';
-import {HomeComponent} from './components/home/home.component';
+import {OrderPageComponent} from './components/order-page/order-menu.component';
+import {HomePageComponent} from './components/home-page/home-page.component';
 
 const routes: Routes = [
-  {path: 'menu', component: MenuComponent},
-  {path: '', component: HomeComponent}
+  {path: 'order-page', component: OrderPageComponent},
+  {path: '', component: HomePageComponent},
+
 ];
 
 @NgModule({
