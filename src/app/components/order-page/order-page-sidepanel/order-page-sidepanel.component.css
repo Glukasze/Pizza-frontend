@@ -36,3 +36,16 @@
   position: relative;
   top: 60px;
 }
+
+.individual-pizza-name {
+  display: inline-block;
+}
+
+.individual-pizza-price {
+  float: right;
+}
+
+li {
+  width: 300px;
+  list-style-type: none;
+}

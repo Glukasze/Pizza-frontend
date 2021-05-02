@@ -4,11 +4,14 @@
   </div>
   <div class="order-page-sidepanel-items">
     <ul *ngFor="let pizza of selectedPizzas">
-      <li>{{ pizza.name }}</li>
+      <li>
+        <p class="individual-pizza-name">{{ pizza.name }}</p>
+        <p class="individual-pizza-price">$ {{ pizza.price }}</p>
+      </li>
     </ul>
   </div>
   <div class="order-page-sidepanel-total">
-    <h4>Total: ${{ total }}</h4>
+    <h4>Total: $ {{ total }}</h4>
   </div>
   <div class="d-grid gap-2 col-6 mx-auto checkout">
     <button type="button" class="btn btn-success small d-inline-block">Check out</button>

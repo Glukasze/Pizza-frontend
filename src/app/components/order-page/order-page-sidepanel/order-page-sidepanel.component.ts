@@ -26,7 +26,7 @@ export class OrderPageSidepanelComponent implements OnInit {
   calculateTotal(): void {
     this.total = 0;
     for (const pizza of this.selectedPizzas) {
-      // this.total += pizza
+      this.total += pizza.price;
     }
     // this.total = 0;
     // if (this.selectedPizzas.length > 0) {

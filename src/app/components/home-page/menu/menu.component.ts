@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   row1: Pizza[] = [];
   row2: Pizza[] = [];
 
-  productsPerColumn = 5;
+  productsPerColumn = 6;
 
   constructor(private menuService: MenuService) { }
 
