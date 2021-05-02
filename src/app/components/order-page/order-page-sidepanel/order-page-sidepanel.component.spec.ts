@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrderPageComponent } from './order-page.component';
+import { OrderPageSidepanelComponent } from './order-page-sidepanel.component';
 
-describe('OrderMenuComponent', () => {
-  let component: OrderPageComponent;
-  let fixture: ComponentFixture<OrderPageComponent>;
+describe('OrderPageSidepanelComponent', () => {
+  let component: OrderPageSidepanelComponent;
+  let fixture: ComponentFixture<OrderPageSidepanelComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OrderPageComponent ]
+      declarations: [ OrderPageSidepanelComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OrderPageComponent);
+    fixture = TestBed.createComponent(OrderPageSidepanelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
