@@ -3,21 +3,12 @@
     <h3>Your order</h3>
   </div>
   <div class="order-page-sidepanel-items">
-    <p>item 1</p>
-    <p>item 2</p>
-    <p>item 3</p>
-    <p>item 4</p>
-    <p>item 5</p>
-    <p>item 5</p>
-    <p>item 5</p>
-    <p>item 5</p>
-    <p>item 5</p>
-    <p>item 5</p>
-    <p>item 5</p>
-    <p>item 5</p>
+    <ul *ngFor="let pizza of selectedPizzas">
+      <li>{{ pizza.name }}</li>
+    </ul>
   </div>
   <div class="order-page-sidepanel-total">
-    <h4>Total: 100$</h4>
+    <h4>Total: ${{ total }}</h4>
   </div>
   <div class="d-grid gap-2 col-6 mx-auto checkout">
     <button type="button" class="btn btn-success small d-inline-block">Check out</button>

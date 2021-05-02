@@ -1,154 +1,59 @@
 <div class="order-page-menu-div">
   <div class="row mb-4">
-    <div class="col">
+    <div class="col" *ngFor="let pizza of row1">
       <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" alt="Card image cap">
         <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
+          <h5 class="card-title">{{ pizza.name }}</h5>
+          <p class="card-text">tomato sauce, cheese {{ pizza.toppingsString }}</p>
           <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
-        <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
-          <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
-        <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
-          <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
+            <a class="btn btn-success" (click)="addPizza(pizza)">Add</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row mb-4">
-    <div class="col">
+    <div class="col" *ngFor="let pizza of row2">
       <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" alt="Card image cap">
         <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
+          <h5 class="card-title">{{ pizza.name }}</h5>
+          <p class="card-text">tomato sauce, cheese {{ pizza.toppingsString }}</p>
           <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
-        <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
-          <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
-        <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
-          <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
+            <a class="btn btn-success" (click)="addPizza(pizza)">Add</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row mb-4">
-    <div class="col">
+    <div class="col" *ngFor="let pizza of row3">
       <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" alt="Card image cap">
         <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
+          <h5 class="card-title">{{ pizza.name }}</h5>
+          <p class="card-text">tomato sauce, cheese {{ pizza.toppingsString }}</p>
           <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
-        <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
-          <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
-        <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
-          <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
+            <a class="btn btn-success" (click)="addPizza(pizza)">Add</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row mb-4">
-    <div class="col">
+    <div class="col" *ngFor="let pizza of row4">
       <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" alt="Card image cap">
         <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
+          <h5 class="card-title">{{ pizza.name }}</h5>
+          <p class="card-text">tomato sauce, cheese {{ pizza.toppingsString }}</p>
           <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
-        <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
-          <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light" style="width: 15rem;">
-        <img class="card-img-top" src="../../../../assets/pictures/sample_pizza.jpg" alt="Card image cap">
-        <div class="card-body card-body-custom">
-          <h5 class="card-title">Pizza</h5>
-          <p class="card-text">Ingredients.</p>
-          <div class="d-grid gap-2 col-8 mx-auto">
-            <a href="#" class="btn btn-success">Order</a>
+            <a class="btn btn-success" (click)="addPizza(pizza)">Add</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+<!--  <button type="button" (click)="sendPizzas()">LOG</button>-->
 </div>
