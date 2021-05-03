@@ -20,7 +20,8 @@ export class OrderPageMenuComponent implements OnInit {
 
   productsPerColumn = 3;
 
-  selectedPizzas: Pizza[] = [];
+  activePizza: Pizza;
+
 
   constructor(private menuService: MenuService,
               private orderPageService: OrderPageService) { }
@@ -56,14 +57,7 @@ export class OrderPageMenuComponent implements OnInit {
   }
 
   addPizza(pizza: Pizza): void {
-    this.selectedPizzas.push(pizza);
-    this.orderPageService.communicateMessage(this.selectedPizzas);
-  }
-
-  logPizzas(): void {
-    for (const pizza of this.selectedPizzas) {
-      console.log(pizza);
-    }
+    this.orderPageService.sendSelectedPizza(pizza);
   }
 
 }

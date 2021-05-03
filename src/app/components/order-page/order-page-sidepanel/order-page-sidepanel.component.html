@@ -5,8 +5,14 @@
   <div class="order-page-sidepanel-items">
     <ul *ngFor="let pizza of selectedPizzas">
       <li>
-        <p class="individual-pizza-name">{{ pizza.name }}</p>
-        <p class="individual-pizza-price">$ {{ pizza.price }}</p>
+        <p class="individual-pizza-name">
+          {{ pizza.name }}
+        </p>
+        <p class="individual-pizza-price">
+          $ {{ pizza.price }}
+          <button class="trash-button" type="button" (click)="removePizza(pizza)"><i class="fa fa-trash-o trash-icon"></i></button>
+        </p>
+        <p class="individual-pizza-ingredients">-{{ pizza.toppingsString}}</p>
       </li>
     </ul>
   </div>

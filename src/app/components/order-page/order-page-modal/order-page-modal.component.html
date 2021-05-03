@@ -1,0 +1,41 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <ng-container *ngIf="selectedPizza">
+          <h4 class="modal-title col-12 text-center" id="exampleModalLabel">{{ selectedPizza.name }}</h4>
+        </ng-container>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Topping</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr class="table-success">
+            <td>base</td>
+            <td>$ 10</td>
+          </tr>
+          <tr *ngFor="let ingredient of allIngredients">
+            <ng-container *ngIf="ingredientSaved(ingredient); else notSaved">
+              <td class="table-success">{{ ingredient.name }}</td>
+              <td class="table-success">$ {{ ingredient.price }}</td>
+            </ng-container>
+            <ng-template #notSaved>
+              <td>{{ ingredient.name }}</td>
+              <td>$ {{ ingredient.price }}</td>
+            </ng-template>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <h4 class="text-start mr-auto total">Total: $ {{ savedPizzaTotal }}</h4>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="addPizza()">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

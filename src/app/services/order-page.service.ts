@@ -6,11 +6,16 @@ import {Subject} from 'rxjs';
 })
 export class OrderPageService {
 
-  sendMessage = new Subject();
+  selectedPizza = new Subject();
+  savedPizza = new Subject();
 
   constructor() { }
 
-  communicateMessage(msg): void {
-    this.sendMessage.next(msg);
+  sendSelectedPizza(pizza): void {
+    this.selectedPizza.next(pizza);
+  }
+
+  sendSavedPizza(pizza): void {
+    this.savedPizza.next(pizza);
   }
 }

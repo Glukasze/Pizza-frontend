@@ -9,15 +9,15 @@ import {OrderPageService} from '../../../services/order-page.service';
 })
 export class OrderPageSidepanelComponent implements OnInit {
 
-  selectedPizzas: Pizza[];
+  selectedPizzas: Pizza[] = [];
   total = 0;
 
   constructor(private orderPageService: OrderPageService) { }
 
   ngOnInit(): void {
-    this.orderPageService.sendMessage.subscribe(
-      (pizzas: Pizza[]) => {
-        this.selectedPizzas = pizzas;
+    this.orderPageService.savedPizza.subscribe(
+      (pizza: Pizza) => {
+        this.selectedPizzas.push(pizza);
         this.calculateTotal();
       }
     );
@@ -28,15 +28,15 @@ export class OrderPageSidepanelComponent implements OnInit {
     for (const pizza of this.selectedPizzas) {
       this.total += pizza.price;
     }
-    // this.total = 0;
-    // if (this.selectedPizzas.length > 0) {
-    //   for (const pizza of this.selectedPizzas) {
-    //     this.total += 10;
-    //     for (const ingredient of pizza.toppings) {
-    //       this.total += ingredient.price;
-    //     }
-    //   }
-    // }
+  }
+
+  removePizza(pizza: Pizza): void{
+    this.selectedPizzas.forEach( (item, index) => {
+      if (item === pizza) {
+        this.selectedPizzas.splice(index, 1);
+      }
+    });
+    this.calculateTotal();
   }
 
 }
