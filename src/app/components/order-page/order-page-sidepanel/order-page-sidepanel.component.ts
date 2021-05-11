@@ -24,10 +24,10 @@ export class OrderPageSidepanelComponent implements OnInit {
   }
 
   calculateTotal(): void {
-    this.total = 0;
-    for (const pizza of this.selectedPizzas) {
-      this.total += pizza.price;
-    }
+    this.total = this.selectedPizzas.reduce((accumulator, current) => {
+      accumulator += current.price;
+      return accumulator;
+    }, 0);
   }
 
   removePizza(pizza: Pizza): void{
