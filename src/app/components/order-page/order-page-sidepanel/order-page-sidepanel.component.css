@@ -1,0 +1,67 @@
+.order-page-sidepanel-div {
+  position: sticky;
+  /*left: 997px;*/
+  left: 950px;
+  width: 30%;
+  height: 400px;
+  bottom: 280px;
+  background-color: #f6efe6;
+  padding: 20px;
+  box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.1),
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.order-page-sidepanel-heading {
+  text-align: center;
+  border-bottom: solid black 1px;
+}
+
+.order-page-sidepanel-items {
+  height: 250px;
+  overflow: auto;
+}
+
+.order-page-sidepanel-items::-webkit-scrollbar {
+  display: none;
+}
+
+.order-page-sidepanel-total {
+  position: relative;
+  top: 50px;
+  border-top: solid black 1px;
+}
+
+.checkout {
+  position: relative;
+  top: 60px;
+}
+
+.individual-pizza-name {
+  display: inline-block;
+}
+
+.individual-pizza-price {
+  float: right;
+}
+
+.individual-pizza-ingredients {
+  font-style: italic;
+  font-weight: lighter;
+  margin-top: -20px;
+  padding-left: 20px
+}
+
+.trash-button {
+  border: none;
+  background-color: transparent;
+}
+
+.trash-icon {
+  color: red;
+}
+
+li {
+  width: 300px;
+  list-style-type: none;
+}

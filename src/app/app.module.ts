@@ -4,11 +4,17 @@ import { AgmCoreModule} from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { HomeComponent } from './components/home/home.component';
+import { MenuComponent } from './components/home-page/menu/menu.component';
+import { HomeComponent } from './components/home-page/home/home.component';
 import {HttpClientModule} from '@angular/common/http';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/home-page/about/about.component';
+import { ContactComponent } from './components/home-page/contact/contact.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import {OrderPageComponent} from './components/order-page/order-page.component';
+import { NavbarComponent } from './components/order-page/navbar/navbar.component';
+import { OrderPageMenuComponent } from './components/order-page/order-page-menu/order-page-menu.component';
+import { OrderPageSidepanelComponent } from './components/order-page/order-page-sidepanel/order-page-sidepanel.component';
+import { OrderPageModalComponent } from './components/order-page/order-page-modal/order-page-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +23,12 @@ import { ContactComponent } from './components/contact/contact.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    HomePageComponent,
+    OrderPageComponent,
+    NavbarComponent,
+    OrderPageMenuComponent,
+    OrderPageSidepanelComponent,
+    OrderPageModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Pizza} from '../../models/pizza';
-import {MenuService} from '../../services/menu.service';
+import {Pizza} from '../../../models/pizza';
+import {MenuService} from '../../../services/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   row1: Pizza[] = [];
   row2: Pizza[] = [];
 
-  productsPerColumn = 5;
+  productsPerColumn = 6;
 
   constructor(private menuService: MenuService) { }
 

@@ -7,10 +7,34 @@
   background-attachment: fixed;
 }
 
+.order-div {
+  position: relative;
+  left: 580px;
+  width: 300px;
+  height: 50px;
+}
+
+
+.order-btn {
+  background-color: transparent;
+  border: none;
+  font-family: Papyrus, fantasy;
+  font-size: 30px;
+  text-decoration: underline;
+  color: black;
+}
+
+.order-btn:hover {
+  font-size: 40px;
+  position: relative;
+  right: 25px
+}
+
 .menu-picture {
   height: 65vh;
-  position: absolute;
+  position: relative;
   left: 60%;
+  top: 80px;
 }
 
 .header-menu {
@@ -55,5 +79,5 @@
 }
 
 .menu-list-div {
-  margin-top: 50px;
+  margin-top: -500px;
 }

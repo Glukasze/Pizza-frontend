@@ -1,0 +1,19 @@
+.order-page-menu-div {
+  position: relative;
+  left: 50px;
+  top: 50px;
+  width: 60%;
+}
+
+.card-body-custom {
+  background-color: whitesmoke;
+  box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.1),
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.price {
+  float: right;
+  font-weight: bold;
+  color: teal;
+}

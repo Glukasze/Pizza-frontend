@@ -8,4 +8,5 @@ export interface Pizza {
   sauce: Ingredient;
   toppings: Ingredient[];
   toppingsString: string;
+  price: number;
 }

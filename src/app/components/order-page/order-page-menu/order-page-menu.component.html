@@ -1,0 +1,62 @@
+<div class="order-page-menu-div">
+  <div class="row mb-4">
+    <div class="col" *ngFor="let pizza of row1">
+      <div class="card bg-light" style="width: 15rem;">
+        <img class="card-img-top" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" alt="Card image cap">
+        <div class="card-body card-body-custom">
+          <h5 class="card-title d-inline-block">{{ pizza.name }}</h5>
+          <p class="d-inline-block price">$ {{ pizza.price }}</p>
+          <p class="card-text">tomato sauce, cheese {{ pizza.toppingsString }}</p>
+          <div class="d-grid gap-2 col-8 mx-auto">
+            <a type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="addPizza(pizza)">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col" *ngFor="let pizza of row2">
+      <div class="card bg-light" style="width: 15rem;">
+        <img class="card-img-top" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" alt="Card image cap">
+        <div class="card-body card-body-custom">
+          <h5 class="card-title d-inline-block">{{ pizza.name }}</h5>
+          <p class="d-inline-block price">$ {{ pizza.price }}</p>
+          <p class="card-text">tomato sauce, cheese {{ pizza.toppingsString }}</p>
+          <div class="d-grid gap-2 col-8 mx-auto">
+            <a type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="addPizza(pizza)">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col" *ngFor="let pizza of row3">
+      <div class="card bg-light" style="width: 15rem;">
+        <img class="card-img-top" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" alt="Card image cap">
+        <div class="card-body card-body-custom">
+          <h5 class="card-title d-inline-block">{{ pizza.name }}</h5>
+          <p class="d-inline-block price">$ {{ pizza.price }}</p>
+          <p class="card-text">tomato sauce, cheese {{ pizza.toppingsString }}</p>
+          <div class="d-grid gap-2 col-8 mx-auto">
+            <a type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="addPizza(pizza)">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col" *ngFor="let pizza of row4">
+      <div class="card bg-light" style="width: 15rem;">
+        <img class="card-img-top" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" alt="Card image cap">
+        <div class="card-body card-body-custom">
+          <h5 class="card-title d-inline-block">{{ pizza.name }}</h5>
+          <p class="d-inline-block price">$ {{ pizza.price }}</p>
+          <p class="card-text">tomato sauce, cheese {{ pizza.toppingsString }}</p>
+          <div class="d-grid gap-2 col-8 mx-auto">
+            <a type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="addPizza(pizza)">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
