@@ -15,6 +15,8 @@ import { NavbarComponent } from './components/order-page/navbar/navbar.component
 import { OrderPageMenuComponent } from './components/order-page/order-page-menu/order-page-menu.component';
 import { OrderPageSidepanelComponent } from './components/order-page/order-page-sidepanel/order-page-sidepanel.component';
 import { OrderPageModalComponent } from './components/order-page/order-page-modal/order-page-modal.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartMenuComponent } from './components/cart/cart-menu/cart-menu.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { OrderPageModalComponent } from './components/order-page/order-page-moda
     NavbarComponent,
     OrderPageMenuComponent,
     OrderPageSidepanelComponent,
-    OrderPageModalComponent
+    OrderPageModalComponent,
+    CartComponent,
+    CartMenuComponent
   ],
   imports: [
     BrowserModule,
