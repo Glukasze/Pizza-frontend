@@ -69,4 +69,34 @@ export class OrderPageModalComponent implements OnInit {
     return false;
   }
 
+  setSavedPizzaToppingsString(): void {
+    this.savedPizza.toppingsString = '';
+    for (let i = 0; i < this.savedPizza.toppings.length; i++) {
+      this.savedPizza.toppingsString += this.savedPizza.toppings[i].name;
+      if (i < this.savedPizza.toppings.length - 1) {
+        this.savedPizza.toppingsString += ', ';
+      }
+    }
+  }
+
+  setCustom(): void {
+    this.savedPizza.toppings = this.savedPizzaIngredients;
+    this.calculateSavedPizzaTotal();
+    this.savedPizza.price = this.savedPizzaTotal;
+    this.setSavedPizzaToppingsString();
+
+  }
+
+  toggleSelectedIngredient(ingredient: Ingredient): void {
+    if (this.selectedPizza.productName === 'Custom') {
+      const ingredientIndex = this.savedPizzaIngredients.indexOf(ingredient);
+      if (ingredientIndex !== -1) {
+        this.savedPizzaIngredients.splice(ingredientIndex, 1);
+      } else {
+        this.savedPizzaIngredients.push(ingredient);
+      }
+      this.setCustom();
+    }
+  }
+
 }

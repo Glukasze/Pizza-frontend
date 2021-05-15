@@ -17,6 +17,7 @@ export class OrderPageSidepanelComponent implements OnInit {
   ngOnInit(): void {
     this.orderPageService.savedPizza.subscribe(
       (pizza: Pizza) => {
+        console.log(pizza.toppings);
         this.selectedPizzas.push(pizza);
         this.calculateTotal();
       }

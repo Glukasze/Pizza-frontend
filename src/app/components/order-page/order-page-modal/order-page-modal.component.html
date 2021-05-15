@@ -3,7 +3,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <ng-container *ngIf="selectedPizza">
-          <h4 class="modal-title col-12 text-center" id="exampleModalLabel">{{ selectedPizza.name }}</h4>
+          <h4 class="modal-title col-12 text-center" id="exampleModalLabel">{{ selectedPizza.productName }}</h4>
         </ng-container>
       </div>
       <div class="modal-body">
@@ -19,7 +19,7 @@
             <td>base</td>
             <td>$ 10</td>
           </tr>
-          <tr *ngFor="let ingredient of allIngredients">
+          <tr *ngFor="let ingredient of allIngredients" (click)="toggleSelectedIngredient(ingredient)">
             <ng-container *ngIf="ingredientSaved(ingredient); else notSaved">
               <td class="table-success">{{ ingredient.name }}</td>
               <td class="table-success">$ {{ ingredient.price }}</td>
