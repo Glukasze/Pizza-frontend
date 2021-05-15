@@ -16,7 +16,7 @@ import { OrderPageMenuComponent } from './components/order-page/order-page-menu/
 import { OrderPageSidepanelComponent } from './components/order-page/order-page-sidepanel/order-page-sidepanel.component';
 import { OrderPageModalComponent } from './components/order-page/order-page-modal/order-page-modal.component';
 import { CartComponent } from './components/cart/cart.component';
-import { CartMenuComponent } from './components/cart/cart-menu/cart-menu.component';
+import {CartMenuComponent} from './components/cart/cart-menu/cart-menu.component';
 
 @NgModule({
   declarations: [
