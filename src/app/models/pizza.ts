@@ -2,7 +2,7 @@ import {Ingredient} from './ingredient';
 
 export interface Pizza {
   id: number;
-  productName: string;
+  pizzaName: string;
   pictureId: string;
   cheese: boolean;
   sauce: Ingredient;

@@ -3,6 +3,8 @@ import {Pizza} from '../../../models/pizza';
 import {OrderPageService} from '../../../services/order-page.service';
 import {Ingredient} from '../../../models/ingredient';
 import {MenuService} from '../../../services/menu.service';
+import {CartService} from '../../../services/cart.service';
+import {Test} from '../../../models/test';
 
 @Component({
   selector: 'app-order-page-modal',
@@ -18,11 +20,13 @@ export class OrderPageModalComponent implements OnInit {
 
   allIngredients: Ingredient[] = [];
 
+  testObject: Test;
 
 
 
   constructor(private orderPageService: OrderPageService,
-              private menuService: MenuService) { }
+              private menuService: MenuService,
+              private cartService: CartService) { }
 
   ngOnInit(): void {
 
@@ -44,6 +48,7 @@ export class OrderPageModalComponent implements OnInit {
 
   addPizza(): void {
     this.orderPageService.sendSavedPizza(this.savedPizza);
+    this.cartService.postPizza(this.savedPizza);
   }
 
   calculateSavedPizzaTotal(): void {
@@ -88,7 +93,7 @@ export class OrderPageModalComponent implements OnInit {
   }
 
   toggleSelectedIngredient(ingredient: Ingredient): void {
-    if (this.selectedPizza.productName === 'Custom') {
+    if (this.selectedPizza.pizzaName === 'Custom') {
       const ingredientIndex = this.savedPizzaIngredients.indexOf(ingredient);
       if (ingredientIndex !== -1) {
         this.savedPizzaIngredients.splice(ingredientIndex, 1);
@@ -97,6 +102,19 @@ export class OrderPageModalComponent implements OnInit {
       }
       this.setCustom();
     }
+  }
+
+  testing(): void {
+    this.cartService.getTest().subscribe(
+      test => {
+        this.testObject = test;
+        this.testObject.name = 'Dude';
+        console.log(this.testObject.id);
+        console.log(this.testObject.name);
+        console.log(this.testObject.age);
+        this.cartService.postTest(this.testObject);
+      }
+    );
   }
 
 }

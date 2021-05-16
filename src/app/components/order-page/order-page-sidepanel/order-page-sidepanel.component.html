@@ -6,7 +6,7 @@
     <ul *ngFor="let pizza of selectedPizzas">
       <li>
         <p class="individual-pizza-name">
-          {{ pizza.productName }}
+          {{ pizza.pizzaName }}
         </p>
         <p class="individual-pizza-price">
           $ {{ pizza.price }}
@@ -20,6 +20,6 @@
     <h4>Total: $ {{ total }}</h4>
   </div>
   <div class="d-grid gap-2 col-6 mx-auto checkout">
-    <button type="button" class="btn btn-success small d-inline-block">Check out</button>
+    <button type="button" class="btn btn-success small d-inline-block" routerLink="/cart">Check out</button>
   </div>
 </div>
