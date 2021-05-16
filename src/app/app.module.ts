@@ -19,6 +19,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { CartContentComponent } from './components/cart/cart-content/cart-content.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CheckoutContentComponent } from './components/checkout/checkout-content/checkout-content.component';
+import { PaidComponent } from './components/paid/paid.component';
+import { PaidContentComponent } from './components/paid/paid-content/paid-content.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { CheckoutContentComponent } from './components/checkout/checkout-content
     CartComponent,
     CartContentComponent,
     CheckoutComponent,
-    CheckoutContentComponent
+    CheckoutContentComponent,
+    PaidComponent,
+    PaidContentComponent
   ],
   imports: [
     BrowserModule,
