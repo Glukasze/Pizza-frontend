@@ -16,7 +16,11 @@ import { OrderPageMenuComponent } from './components/order-page/order-page-menu/
 import { OrderPageSidepanelComponent } from './components/order-page/order-page-sidepanel/order-page-sidepanel.component';
 import { OrderPageModalComponent } from './components/order-page/order-page-modal/order-page-modal.component';
 import { CartComponent } from './components/cart/cart.component';
-import {CartMenuComponent} from './components/cart/cart-menu/cart-menu.component';
+import { CartContentComponent } from './components/cart/cart-content/cart-content.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { CheckoutContentComponent } from './components/checkout/checkout-content/checkout-content.component';
+import { PaidComponent } from './components/paid/paid.component';
+import { PaidContentComponent } from './components/paid/paid-content/paid-content.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import {CartMenuComponent} from './components/cart/cart-menu/cart-menu.component
     OrderPageSidepanelComponent,
     OrderPageModalComponent,
     CartComponent,
-    CartMenuComponent
+    CartContentComponent,
+    CheckoutComponent,
+    CheckoutContentComponent,
+    PaidComponent,
+    PaidContentComponent
   ],
   imports: [
     BrowserModule,

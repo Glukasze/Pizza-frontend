@@ -18,6 +18,7 @@ export class MenuService {
     return this.http.get<Pizza[]>(this.menuUrl);
   }
 
+
   getIngredients(): Observable<Ingredient[]> {
     return this.http.get<Ingredient[]>(this.ingredientsUrl);
   }

@@ -3,6 +3,7 @@ import {Pizza} from '../../../models/pizza';
 import {OrderPageService} from '../../../services/order-page.service';
 import {Ingredient} from '../../../models/ingredient';
 import {MenuService} from '../../../services/menu.service';
+import {CartService} from '../../../services/cart.service';
 
 @Component({
   selector: 'app-order-page-modal',
@@ -19,10 +20,9 @@ export class OrderPageModalComponent implements OnInit {
   allIngredients: Ingredient[] = [];
 
 
-
-
   constructor(private orderPageService: OrderPageService,
-              private menuService: MenuService) { }
+              private menuService: MenuService,
+              private cartService: CartService) { }
 
   ngOnInit(): void {
 
@@ -44,6 +44,8 @@ export class OrderPageModalComponent implements OnInit {
 
   addPizza(): void {
     this.orderPageService.sendSavedPizza(this.savedPizza);
+    // this.cartService.postPizza(this.savedPizza).subscribe();
+    this.cartService.addToOrder(this.savedPizza).subscribe();
   }
 
   calculateSavedPizzaTotal(): void {
@@ -88,7 +90,7 @@ export class OrderPageModalComponent implements OnInit {
   }
 
   toggleSelectedIngredient(ingredient: Ingredient): void {
-    if (this.selectedPizza.productName === 'Custom') {
+    if (this.selectedPizza.pizzaName === 'Custom') {
       const ingredientIndex = this.savedPizzaIngredients.indexOf(ingredient);
       if (ingredientIndex !== -1) {
         this.savedPizzaIngredients.splice(ingredientIndex, 1);

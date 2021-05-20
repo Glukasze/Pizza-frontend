@@ -2,8 +2,8 @@ import {Ingredient} from './ingredient';
 
 export interface Pizza {
   id: number;
-  productName: string;
-  pictureId: string;
+  pizzaName: string;
+  pictureId: number;
   cheese: boolean;
   sauce: Ingredient;
   toppings: Ingredient[];

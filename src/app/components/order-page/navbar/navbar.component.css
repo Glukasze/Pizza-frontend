@@ -5,3 +5,7 @@
       /*0 0  0 2px rgb(255,255,255),*/
     01em 0.3em 1em rgba(0,0,0,0.3);
 }
+
+.logo-img {
+  border-radius: 150px;
+}
