@@ -69,14 +69,14 @@
       </div>
       <div class="mt-4 mb-4 d-flex justify-content-between">
         <button type="button" class="btn btn-secondary" routerLink="/cart">Go back</button>
-        <button class="btn btn-success px-3" routerLink="/paid">Pay $840</button>
+        <button class="btn btn-success px-3" routerLink="/paid">Pay ${{ total }}</button>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card big-card p-3 mb-3"> <span>To pay</span>
         <div class="d-flex flex-row align-items-end mb-3">
-          <h1 class="mb-0">$89</h1>
-        </div> <span>Estimated delivery time: 60 minutes</span>
+          <h1 class="mb-0">${{ total }}</h1>
+        </div> <span>Estimated delivery time: 44 minutes</span>
         <div class="mt-3">Thank you for your order!</div>
       </div>
     </div>

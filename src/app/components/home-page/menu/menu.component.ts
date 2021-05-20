@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Pizza} from '../../../models/pizza';
 import {MenuService} from '../../../services/menu.service';
+import {CartService} from '../../../services/cart.service';
 
 @Component({
   selector: 'app-menu',
@@ -15,7 +16,8 @@ export class MenuComponent implements OnInit {
 
   productsPerColumn = 6;
 
-  constructor(private menuService: MenuService) { }
+  constructor(private menuService: MenuService,
+              private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getMenu();
@@ -30,6 +32,12 @@ export class MenuComponent implements OnInit {
         }
       });
   }
+
+  // postMenu(): void {
+  //   for (const pizza of this.pizzas) {
+  //     this.cartService.postPizza(pizza).subscribe();
+  //   }
+  // }
 
   sortMenu(): void {
     for (let i = 0; i < this.pizzas.length; i++) {

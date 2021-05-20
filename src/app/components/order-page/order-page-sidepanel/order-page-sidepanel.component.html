@@ -3,7 +3,19 @@
     <h3>Your order</h3>
   </div>
   <div class="order-page-sidepanel-items">
-    <ul *ngFor="let pizza of selectedPizzas">
+    <ul *ngFor="let pizza of order">
+      <li>
+        <p class="individual-pizza-name">
+          {{ pizza.pizzaName }}
+        </p>
+        <p class="individual-pizza-price">
+          $ {{ pizza.price }}
+          <button class="trash-button" type="button" (click)="removePizza(pizza)"><i class="fa fa-trash-o trash-icon"></i></button>
+        </p>
+        <p class="individual-pizza-ingredients">-{{ pizza.toppingsString}}</p>
+      </li>
+    </ul>
+    <ul *ngFor="let pizza of savedPizzas">
       <li>
         <p class="individual-pizza-name">
           {{ pizza.pizzaName }}

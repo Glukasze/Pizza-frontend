@@ -12,13 +12,13 @@
         </tr>
         </thead>
         <tbody class="cart-content-table-body">
-        <tr *ngFor="let pizza of mockPizzas">
+        <tr *ngFor="let pizza of order">
           <td class="col-sm-8 col-md-6">
             <div class="media">
               <a class="thumbnail pull-left mr-3" href="#"> <img class="media-object" src="../../../../assets/pictures/pizzas/{{ pizza.pictureId}}.jpg" style="width: 72px; height: 72px;"> </a>
               <div class="media-body">
-                <h5> {{ pizza.name }} </h5>
-                <p class="font-italic"> {{ pizza.ingredients }} </p>
+                <h5> {{ pizza.pizzaName }} </h5>
+                <p class="font-italic"> {{ pizza.toppingsString }} </p>
               </div>
             </div>
           </td>
@@ -28,7 +28,7 @@
           <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
           <td class="col-sm-1 col-md-1 text-center"><strong>$ {{ pizza.price }}</strong></td>
           <td class="col-sm-1 col-md-1">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn btn-danger" (click)="removeFromOrder(pizza)">
               <span class="glyphicon glyphicon-remove"></span> Remove
             </button></td>
         </tr>
@@ -37,21 +37,21 @@
           <td>   </td>
           <td>   </td>
           <td><h5>Subtotal</h5></td>
-          <td><h5><strong>$61</strong></h5></td>
+          <td><h5><strong>${{ totalPrice }}</strong></h5></td>
         </tr>
         <tr>
           <td>   </td>
           <td>   </td>
           <td>   </td>
           <td><h5>Shipping</h5></td>
-          <td><h5><strong>$8</strong></h5></td>
+          <td><h5><strong>$5</strong></h5></td>
         </tr>
         <tr>
           <td>   </td>
           <td>   </td>
           <td>   </td>
           <td><h3>Total</h3></td>
-          <td><h3><strong>$69</strong></h3></td>
+          <td><h3><strong>${{ totalPrice + 5 }}</strong></h3></td>
         </tr>
         <tr>
           <td>   </td>

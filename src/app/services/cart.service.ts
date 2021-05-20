@@ -2,38 +2,40 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Pizza} from '../models/pizza';
 import {Observable} from 'rxjs';
-import {Test} from '../models/test';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  saveUrl = 'http://localhost:8080/save-pizza';
-
-  testUrl = 'http://localhost:8080/test';
-  getTestUrl = 'http://localhost:8080/test';
-
-  testObject: Test;
-
+  savePizzaUrl = 'http://localhost:8080/save-pizza';
+  addToOrderUrl = 'http://localhost:8080/add-to-order';
+  deleteFromOrderUrl = 'http://localhost:8080/delete-from-order';
+  deletePizzaUrl = 'http://localhost:8080/delete-pizza';
+  getOrderUrl = 'http://localhost:8080/order';
 
   constructor(private http: HttpClient) { }
 
-  postPizza(pizza: Pizza): void {
-    console.log(JSON.stringify(pizza));
-    this.http.post(this.saveUrl, JSON.stringify(pizza)).subscribe(data => console.log(data));
+  // postPizza(pizza: Pizza): Observable<Pizza> {
+  //   return this.http.post<Pizza>(this.savePizzaUrl, pizza);
+  // }
+
+  deletePizza(id: number): Observable<Pizza> {
+    return this.http.delete<Pizza>(this.deletePizzaUrl + '/' + id);
   }
 
-  getTest(): Observable<Test> {
-    return this.http.get<Test>(this.testUrl);
+  addToOrder(pizza: Pizza): Observable<Pizza> {
+    return this.http.post<Pizza>(this.addToOrderUrl, pizza);
   }
 
-  postTest(test: Test): void {
-    const obj = {
-      name: 'dupsko',
-      age: 1
-    };
-    this.http.post(this.testUrl, 'testing');
+  deleteFromOrder(id: number): Observable<Pizza> {
+    return this.http.delete<Pizza>(this.deleteFromOrderUrl + '/' + id);
   }
+
+  getOrder(): Observable<Pizza[]> {
+    return this.http.get<Pizza[]>(this.getOrderUrl);
+  }
+
+
 
 }

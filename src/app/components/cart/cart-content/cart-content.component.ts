@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Pizza} from '../../../models/pizza';
 import {OrderPageService} from '../../../services/order-page.service';
+import {CartService} from '../../../services/cart.service';
 
 @Component({
   selector: 'app-cart-content',
@@ -9,44 +10,41 @@ import {OrderPageService} from '../../../services/order-page.service';
 })
 export class CartContentComponent implements OnInit {
 
-  mockPizzas = [
-    {
-      name: 'Rozano',
-      pictureId: 9,
-      ingredients: 'salami, mushrooms, onion',
-      price: 15
-    },
-    {
-      name: 'Angela',
-      pictureId: 1,
-      ingredients: 'mushrooms',
-      price: 12
-    },
-    {
-      name: 'Bianca',
-      pictureId: 2,
-      ingredients: 'corn, ham, onion',
-      price: 16
-    },
-    {
-      name: 'Gabriela',
-      pictureId: 4,
-      ingredients: 'corn, jalapeno, onion, salami',
-      price: 18
-    }
-  ];
+  order: Pizza[];
+  totalPrice: number;
 
-  pizzasInCart: Pizza[] = [];
 
-  constructor(private orderPageService: OrderPageService) { }
+  constructor(private orderPageService: OrderPageService,
+              private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.getOrder();
+  }
 
-    this.orderPageService.savedPizza.subscribe(
-      (pizza: Pizza) => {
-        this.pizzasInCart.push(pizza);
+  getOrder(): void {
+    this.cartService.getOrder().subscribe(
+      (data: Pizza[]) => {
+        this.order = data;
+        this.calculateTotal();
       }
     );
+  }
+
+  calculateTotal(): void {
+    this.totalPrice = 0;
+    for (const pizza of this.order) {
+      this.totalPrice += pizza.price;
+    }
+  }
+
+  removeFromOrder(pizza: Pizza): void {
+    this.cartService.deleteFromOrder(pizza.id).subscribe();
+    this.order.forEach( (item, index) => {
+      if (item === pizza) {
+        this.order.splice(index, 1);
+      }
+    });
+    this.calculateTotal();
   }
 
 }
