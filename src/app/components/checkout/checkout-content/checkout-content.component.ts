@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from '../../../services/cart.service';
 import {Pizza} from '../../../models/pizza';
+import {CheckoutService} from '../../../services/checkout.service';
 
 @Component({
   selector: 'app-checkout-content',
@@ -9,7 +10,12 @@ import {Pizza} from '../../../models/pizza';
 })
 export class CheckoutContentComponent implements OnInit {
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+              private checkoutService: CheckoutService) { }
+
+  street: string;
+  city: string;
+  zip: string;
 
   order: Pizza[] = [];
   total = 0;
@@ -33,6 +39,16 @@ export class CheckoutContentComponent implements OnInit {
       this.total += pizza.price;
     }
     this.total += 5;
+  }
+
+  getAddress(): void {
+    this.street = (<HTMLInputElement> document.getElementById('street')).value;
+    this.city = (<HTMLInputElement> document.getElementById('city')).value;
+    this.zip = (<HTMLInputElement> document.getElementById('zip')).value;
+
+    this.checkoutService.addStreet(this.street).subscribe();
+    this.checkoutService.addCity(this.zip + ' ' + this.city).subscribe();
+
   }
 
 }
