@@ -51,10 +51,10 @@
           <h6 class="text-uppercase">Delivery Address</h6>
           <div class="row mt-3">
             <div class="col-md-6">
-              <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control custom-input" required="required"> <span>Street</span> </div>
+              <div class="inputbox mt-3 mr-2"> <input id="street" type="text" name="name" class="form-control custom-input" required="required"> <span>Street</span> </div>
             </div>
             <div class="col-md-6">
-              <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control custom-input" required="required"> <span>City</span> </div>
+              <div class="inputbox mt-3 mr-2"> <input id="city" type="text" name="name" class="form-control custom-input" required="required"> <span>City</span> </div>
             </div>
           </div>
           <div class="row mt-2">
@@ -62,14 +62,14 @@
               <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control custom-input" required="required"> <span>State/Province</span> </div>
             </div>
             <div class="col-md-6">
-              <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control custom-input" required="required"> <span>Zip code</span> </div>
+              <div class="inputbox mt-3 mr-2"> <input id="zip" type="text" name="name" class="form-control custom-input" required="required"> <span>Zip code</span> </div>
             </div>
           </div>
         </div>
       </div>
       <div class="mt-4 mb-4 d-flex justify-content-between">
         <button type="button" class="btn btn-secondary" routerLink="/cart">Go back</button>
-        <button class="btn btn-success px-3" routerLink="/paid">Pay ${{ total }}</button>
+        <button class="btn btn-success px-3" (click)="getAddress()" routerLink="/paid">Pay ${{ total }}</button>
       </div>
     </div>
     <div class="col-md-4">

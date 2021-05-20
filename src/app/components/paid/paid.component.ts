@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CheckoutService} from '../../services/checkout.service';
+import {Pizza} from '../../models/pizza';
 
 @Component({
   selector: 'app-paid',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class PaidComponent implements OnInit {
 
   constructor() { }
+
+
 
   ngOnInit(): void {
   }
