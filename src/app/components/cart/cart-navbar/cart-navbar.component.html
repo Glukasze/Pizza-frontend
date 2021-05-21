@@ -17,10 +17,16 @@
             <a class="nav-link active" aria-current="page" href="mailto:gracjan.luk@gmail.com">Write to us</a>
           </li>
         </ul>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="button" class="btn btn-outline-success">Log In</button>
-          <button type="button" class="btn btn-outline-warning">Register</button>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" *ngIf="!loggedIn; else elseBlock">
+          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+          <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
         </div>
+        <ng-template #elseBlock>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#accountModal">{{ loggedUser.login }}</button>
+            <button type="button" class="btn btn-outline-danger" (click)="logOut()">Log Out</button>
+          </div>
+        </ng-template>
       </div>
     </div>
   </nav>
