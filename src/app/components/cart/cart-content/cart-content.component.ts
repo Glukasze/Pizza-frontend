@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Pizza} from '../../../models/pizza';
 import {OrderPageService} from '../../../services/order-page.service';
 import {CartService} from '../../../services/cart.service';
+import {OrderPageNavbarComponent} from '../../order-page/order-page-navbar/order-page-navbar.component';
 
 @Component({
   selector: 'app-cart-content',

@@ -11,7 +11,7 @@ import { AboutComponent } from './components/home-page/about/about.component';
 import { ContactComponent } from './components/home-page/contact/contact.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import {OrderPageComponent} from './components/order-page/order-page.component';
-import { NavbarComponent } from './components/order-page/navbar/navbar.component';
+import { OrderPageNavbarComponent } from './components/order-page/order-page-navbar/order-page-navbar.component';
 import { OrderPageMenuComponent } from './components/order-page/order-page-menu/order-page-menu.component';
 import { OrderPageSidepanelComponent } from './components/order-page/order-page-sidepanel/order-page-sidepanel.component';
 import { OrderPageModalComponent } from './components/order-page/order-page-modal/order-page-modal.component';
@@ -21,6 +21,12 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CheckoutContentComponent } from './components/checkout/checkout-content/checkout-content.component';
 import { PaidComponent } from './components/paid/paid.component';
 import { PaidContentComponent } from './components/paid/paid-content/paid-content.component';
+import { LoginModalComponent } from './components/order-page/login-modal/login-modal.component';
+import { RegisterModalComponent } from './components/order-page/register-modal/register-modal.component';
+import { AccountModalComponent } from './components/order-page/account-modal/account-modal.component';
+import { CartNavbarComponent } from './components/cart/cart-navbar/cart-navbar.component';
+import { CheckoutNavbarComponent } from './components/checkout/checkout-navbar/checkout-navbar.component';
+import { PaidNavbarComponent } from './components/paid/paid-navbar/paid-navbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,7 @@ import { PaidContentComponent } from './components/paid/paid-content/paid-conten
     ContactComponent,
     HomePageComponent,
     OrderPageComponent,
-    NavbarComponent,
+    OrderPageNavbarComponent,
     OrderPageMenuComponent,
     OrderPageSidepanelComponent,
     OrderPageModalComponent,
@@ -40,7 +46,13 @@ import { PaidContentComponent } from './components/paid/paid-content/paid-conten
     CheckoutComponent,
     CheckoutContentComponent,
     PaidComponent,
-    PaidContentComponent
+    PaidContentComponent,
+    LoginModalComponent,
+    RegisterModalComponent,
+    AccountModalComponent,
+    CartNavbarComponent,
+    CheckoutNavbarComponent,
+    PaidNavbarComponent
   ],
   imports: [
     BrowserModule,
